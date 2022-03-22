@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="/img/icons8-globe.gif">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="weather_box">
+        <div class="content">
+            <div class="input_box">
+                <h1>Search Your City</h1>
+                <input type="text" name="name" id="input_field">
+                <input type="button" value="Search" id="btn_input">
+            </div>
+            <div class="weather_content">
+                <div class="search_result">
+                    <h2 class="mar-top-15">your Search result</h2>
+                    <div class="weather_img">
+                        <img id="weather_img" src="" alt="">
+                    </div>
+                    <div class="info_box">
+                        <h2 id="cuntry_info"></h2>
+                        <p id="condition">clear</p>
+                        <div class="w_details">
+                            temp: <span id="temp"></span>°C, Presure: <span id="presure"></span> Humidity: <span
+                                id="humidity"></span>
+                        </div>
+                        <div class="country">
+                            <div class="c_img">
+                                <img id="country_img" src="" alt="">
+                            </div>
+                            <h3 id="country">bangladesh</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_history">
+                    <h2 class="mar-top-15">Recent search HIstory</h2>
+                    <div id="history_box">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

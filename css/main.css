@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mar-15 {
+  margin: 0 15px;
+}
+
+.mar-top-15 {
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #d4d0d0;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: 500;
+  color: #005b5e;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+}
+
+.weather_box {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 9999999;
+}
+
+.weather_box::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 110%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(120deg, #79d2fcd5 0%, #96e6a1e0 100%);
+  opacity: .7;
+}
+
+.weather_box .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather_box .weather_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 9;
+  margin: auto;
+}
+
+.weather_box .input_box {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.weather_box .input_box #input_field {
+  width: 60%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #c0ffc8;
+}
+
+.weather_box .input_box #btn_input {
+  width: 100px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background: #7bd2d7;
+}
+
+.weather_box .weather_box .weather_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 850px;
+  width: 100%;
+  background: #7bd2d7;
+  padding: 25px 20px;
+  border-radius: 10px;
+  gap: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.weather_box .search_result,
+.weather_box .search_history {
+  background: #fff;
+  padding: 32px 15px;
+  border-radius: 5px;
+  position: relative;
+  background: rgba(129, 221, 228, 0.911);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 400px;
+  text-align: center;
+}
+
+.weather_box .search_history {
+  margin-left: 20px;
+}
+
+.weather_box .search_history .history_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  margin-top: 15px;
+}
+
+.weather_box .search_history .history_box .his_img,
+.weather_box .search_history .history_box .flag_history {
+  background: aqua;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 5px;
+}
+
+.weather_box .search_result::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fee140), to(#fa709a));
+  background-image: linear-gradient(to right, #fee140 0%, #fa709a 100%);
+  left: -6%;
+  bottom: -4%;
+  z-index: -1;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather_box .info_box {
+  text-align: center;
+}
+
+.weather_box .search_history::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  left: 6%;
+  bottom: -4%;
+  z-index: -1;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather_box .weather_img {
+  text-align: center;
+}
+
+.weather_box .c_img {
+  width: 100%;
+  padding: 20px 25px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.weather_box #country {
+  color: #005b5e;
+}
+
+.weather_box .weather_img {
+  width: 50%;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  margin: 15px auto;
+  background: rgba(255, 255, 255, 0.2);
+}

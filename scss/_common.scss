@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.mar-15 {
+    margin: 0 15px;
+}
+
+.mar-top-15 {
+    margin: 15px 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #d4d0d0;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #005b5e;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+}
