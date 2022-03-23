@@ -7,7 +7,7 @@ const input_field = $("#input_field");
 
 
 
-const api = "9f736461afbe5e2a6c1c07d8e4a7c3f9";
+const api = "";
 
 let weatherInfo = {};
 let a = {};
