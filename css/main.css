@@ -47,6 +47,7 @@ p {
 .weather_box {
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 122vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,11 +65,11 @@ p {
   position: absolute;
   content: "";
   width: 100%;
-  height: 110%;
+  height: 100%;
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(120deg, #79d2fcd5 0%, #96e6a1e0 100%);
+  background-image: linear-gradient(120deg, #9c27b0 0%, #ff5722 100%);
   opacity: .7;
 }
 
@@ -92,6 +93,8 @@ p {
   -ms-flex-line-pack: center;
       align-content: center;
   z-index: 9;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: auto;
 }
 
@@ -117,7 +120,7 @@ p {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  background: #7bd2d7;
+  background: #cad938;
 }
 
 .weather_box .weather_box .weather_content {
@@ -140,7 +143,7 @@ p {
   padding: 32px 15px;
   border-radius: 5px;
   position: relative;
-  background: rgba(129, 221, 228, 0.911);
+  background: #cddc39;
   border-radius: 16px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -149,6 +152,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   max-width: 400px;
   text-align: center;
+  margin-top: 30px;
 }
 
 .weather_box .search_history {

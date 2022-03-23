@@ -158,16 +158,37 @@ function searchFeatchData(city) {
                             weatherInfo.countryFname = city + ' , ' + a[0].name;
                             weatherInfo.country = a[0].name;
                             weatherInfo.flag = a[0].flags.png;
-                            displayLeftUI()
-                            conditionBg()
+                            displayLeftUI();
+                            conditionBg();
+
+                            //history box
+                            const history_box = document.querySelectorAll('.history_box');
+
                             //local storage set
                             const history = getDataLocalStorage();
                             if (history.length === 4) {
+                                history_box[3].remove();
                                 history.pop(weatherInfo);
                                 history.unshift(weatherInfo);
                             } else {
                                 history.unshift(weatherInfo);
                             }
+                            const div = document.createElement("div");
+                            div.innerHTML = `<div class="history_box">
+                                <div class="his_img">
+                                    <img src="${icon}" width="60" alt="">
+                                </div>
+                                <div class="his_detail mar-15">
+                                    <h4>${city} ${weatherInfo.country}</h4>
+                                    <p>${condition}</p>
+                                    temp: <span>${temp.toFixed(2)}</span>°C, Presure: <span>${presure}</span> Humidity: <span>${humidity}</span>
+                                </div>
+                                <div class="flag_history">
+                                    <img src="${weatherInfo.flag}" width="60" alt="">
+                                </div>
+                            </div>`;
+                            $("#search_box").insertAdjacentElement("afterbegin", div)
+
 
                             localStorage.setItem('weather', JSON.stringify(history));
                         })
@@ -203,22 +224,21 @@ window.onload = function () {
     history.forEach(e => {
         const div = document.createElement("div");
         div.innerHTML = `<div class="history_box">
-    <div class="his_img">
-        <img src="${e.icon}" width="60" alt="">
-    </div>
-    <div class="his_detail mar-15">
-        <h4>${e.city} ${e.country}</h4>
-        <p>${e.condition}</p>
-        temp: <span>${e.temp.toFixed(2)}</span>°C, Presure: <span>${e.presure}</span> Humidity: <span>${e.humidity}</span>
-    </div>
-    <div class="flag_history">
-        <img src="${e.flag}" width="60" alt="">
-    </div>
-</div>`;
+        <div class="his_img">
+            <img src="${e.icon}" width="60" alt="">
+        </div>
+        <div class="his_detail mar-15">
+            <h4>${e.city} ${e.country}</h4>
+            <p>${e.condition}</p>
+            temp: <span>${e.temp.toFixed(2)}</span>°C, Presure: <span>${e.presure}</span> Humidity: <span>${e.humidity}</span>
+        </div>
+        <div class="flag_history">
+            <img src="${e.flag}" width="60" alt="">
+        </div>
+      </div>`;
         $("#history_box").appendChild(div);
     });
 }
-
 
 //condition bg
 function conditionBg() {
